@@ -2,6 +2,7 @@ import type { Route } from "./+types/home";
 import SectionBanner from "~/components/sections/SectionBanner";
 import FeaturedServices from "~/components/sections/FeaturedServices";
 import WhyChooseUs from "~/components/sections/WhyChooseUs";
+import PopularServices from "~/components/sections/PopularServices";
 import CtaHotline from "~/components/sections/CtaHotline";
 import JournalPreview from "~/components/sections/JournalPreview";
 export function meta({ }: Route.MetaArgs) {
@@ -19,6 +20,8 @@ export default function Home() {
       <WhyChooseUs />
       <CtaHotline />
       <JournalPreview />
+      <PopularServices />
+      
     </>
   );
 }

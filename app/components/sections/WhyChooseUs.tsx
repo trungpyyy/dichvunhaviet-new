@@ -5,7 +5,7 @@ export default function WhyChooseUs() {
         <section className="bg-base-100 border rounded-xl mt-8">
             <div className="max-w-[1280px] mx-auto px-2 sm:px-4 py-10">
                 <div className="text-center mb-6">
-                    <h2 className="text-xl sm:text-2xl font-semibold">Tại sao nên chọn Hưng Thịnh?</h2>
+                    <h2 className="text-xl sm:text-2xl font-semibold">Tại sao nên chọn Dich vu Nha Viet?</h2>
                 </div>
                 <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
                     <Feature title="Đa dạng dịch vụ" desc="Cung cấp đầy đủ dịch vụ sửa chữa thiết yếu cho gia đình, công ty." />

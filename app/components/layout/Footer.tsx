@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className="bg-base-200 border-t mt-10">
             <div className="max-w-[1280px] mx-auto px-2 sm:px-4 py-10 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
                 <aside>
-                    <h2 className="text-lg font-semibold">Hưng Thịnh Corp™</h2>
+                    <h2 className="text-lg font-semibold">Dịch Vụ Nhà Việt™</h2>
                     <p className="opacity-80 mt-2">Chuyên dịch vụ sửa điện nước, điện lạnh, chống thấm, thi công lắp đặt.</p>
                 </aside>
                 <nav className="flex flex-col gap-2">

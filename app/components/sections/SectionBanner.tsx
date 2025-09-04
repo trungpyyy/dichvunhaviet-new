@@ -38,7 +38,7 @@ export default function SectionBanner() {
                         loop
                         modules={[Pagination, Autoplay]}
                         autoplay={{
-                            delay: 500,
+                            delay: 1500,
                             disableOnInteraction: false,
                         }}
                         spaceBetween={0}

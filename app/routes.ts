@@ -10,4 +10,5 @@ export default [
   route("/san-pham", "routes/san-pham.tsx"),
   route("/nhat-ky", "routes/nhat-ky.tsx"),
   route("/tin-tuc", "routes/tin-tuc.tsx"),
+  route("/tin-tuc/:test", "routes/test-slug.tsx"),
 ] satisfies RouteConfig;
