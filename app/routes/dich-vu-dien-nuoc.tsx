@@ -5,25 +5,6 @@ export function meta() {
   ];
 }
 
-// export default function DichVuDienNuoc() {
-//   return (
-//     <section className="prose dark:prose-invert max-w-none">
-//       <h1>Dịch vụ điện nước</h1>
-//       <ul>
-//         <li>Sửa điện nước</li>
-//         <li>Thợ sửa ống nước</li>
-//         <li>Dò tìm rò rỉ nước</li>
-//         <li>Thi công lắp đặt điện nước</li>
-//       </ul>
-//     </section>
-//   );
-// }
-
-
-
-
-import React from "react";
-
 const ARTICLE_LINKS = [
   {
     text:
@@ -43,15 +24,15 @@ const ARTICLE_LINKS = [
 ];
 
 const Sidebar = () => (
-  <aside style={styles.sidebar}>
-    <div style={styles.searchBox}>
+  <aside className="flex-1 text-sm text-gray-700">
+    <div className="flex mb-6">
       <input
         type="text"
         placeholder="Tìm kiếm..."
-        style={styles.searchInput}
+        className="flex-1 rounded-l border border-gray-300 px-3 py-2 text-sm outline-none"
         aria-label="Tìm kiếm"
       />
-      <button style={styles.searchBtn}>
+      <button className="bg-orange-500 hover:bg-orange-600 border-none px-3 rounded-r cursor-pointer flex items-center transition-colors">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="18"
@@ -65,15 +46,17 @@ const Sidebar = () => (
     </div>
 
     <section>
-      <h3 style={styles.sidebarHeading}>DANH MỤC SẢN PHẨM</h3>
-      <ul style={styles.productList}>
+      <h3 className="uppercase font-bold text-sm mb-3 tracking-wide border-b-2 border-gray-300 pb-1.5">
+        DANH MỤC SẢN PHẨM
+      </h3>
+      <ul className="list-none pl-0 mb-8">
         <li>
-          <button style={styles.dropDownBtn}>
-            Máy nước nóng NLMT <span style={{ fontWeight: "bold" }}>▼</span>
+          <button className="bg-none border-none text-gray-700 text-sm cursor-pointer p-0 font-semibold hover:text-blue-600">
+            Máy nước nóng NLMT <span className="font-bold">▼</span>
           </button>
         </li>
-        <li>
-          <a href="#" style={styles.link}>
+        <li className="mt-2">
+          <a href="#" className="text-blue-700 no-underline hover:underline">
             Đèn led năng lượng mặt trời
           </a>
         </li>
@@ -81,44 +64,48 @@ const Sidebar = () => (
     </section>
 
     <section>
-      <h3 style={styles.sidebarHeading}>GỌI THỢ SỬA ĐIỆN NƯỚC</h3>
+      <h3 className="uppercase font-bold text-sm mb-3 tracking-wide border-b-2 border-gray-300 pb-1.5">
+        GỌI THỢ SỬA ĐIỆN NƯỚC
+      </h3>
       <img
         src="https://hungthinhwater.com/wp-content/uploads/2021/09/sua-dien-nuoc-tai-nha.jpg"
         alt="Sửa điện nước tại nhà"
-        style={styles.callImage}
+        className="w-full object-cover rounded-lg mb-8"
       />
     </section>
 
     <section>
-      <h3 style={styles.sidebarHeading}>BÀI VIẾT MỚI</h3>
-      <ul style={styles.newPostsList}>
-        <li style={styles.newPostItem}>
+      <h3 className="uppercase font-bold text-sm mb-3 tracking-wide border-b-2 border-gray-300 pb-1.5">
+        BÀI VIẾT MỚI
+      </h3>
+      <ul className="list-none m-0 p-0">
+        <li className="flex items-center mb-4">
           <img
             src="https://hungthinhwater.com/wp-content/uploads/2023/05/nguoi-tho-chong-dot-mai-ton-binh-duong-150x150.jpg"
             alt="Thợ chống dột mái tôn tại Phú Giáo – Bình Dương"
-            style={styles.newPostThumb}
+            className="w-14 h-14 object-cover rounded-md mr-3"
           />
-          <a href="#" style={styles.link}>
+          <a href="#" className="text-blue-700 no-underline hover:underline text-sm">
             Thợ chống dột mái tôn tại Phú Giáo – Bình Dương
           </a>
         </li>
-        <li style={styles.newPostItem}>
+        <li className="flex items-center mb-4">
           <img
             src="https://hungthinhwater.com/wp-content/uploads/2023/05/nguoi-tho-chong-dot-mai-ton-dau-tieng-150x150.jpg"
             alt="Thợ chống dột mái tôn tại Dầu Tiếng – Bình Dương"
-            style={styles.newPostThumb}
+            className="w-14 h-14 object-cover rounded-md mr-3"
           />
-          <a href="#" style={styles.link}>
+          <a href="#" className="text-blue-700 no-underline hover:underline text-sm">
             Thợ chống dột mái tôn tại Dầu Tiếng – Bình Dương
           </a>
         </li>
-        <li style={styles.newPostItem}>
+        <li className="flex items-center mb-4">
           <img
             src="https://hungthinhwater.com/wp-content/uploads/2023/05/nguoi-tho-chong-dot-mai-ton-150x150.jpg"
             alt="Thợ chống dột mái tôn"
-            style={styles.newPostThumb}
+            className="w-14 h-14 object-cover rounded-md mr-3"
           />
-          <a href="#" style={styles.link}>
+          <a href="#" className="text-blue-700 no-underline hover:underline text-sm">
             Thợ chống dột mái tôn
           </a>
         </li>
@@ -128,61 +115,66 @@ const Sidebar = () => (
 );
 
 const Content = () => (
-  <article style={styles.content}>
-    <nav style={styles.breadcrumb}>
-      <a href="#" style={styles.breadcrumbLink}>
+  <article className="flex-[3] bg-white p-6 rounded-lg shadow-md leading-relaxed">
+    <nav className="text-sm mb-2 text-gray-600">
+      <a href="#" className="text-blue-500 no-underline hover:underline">
         Trang chủ
       </a>{" "}
       »{" "}
-      <a href="#" style={styles.breadcrumbLink}>
+      <a href="#" className="text-blue-500 no-underline hover:underline">
         Dịch vụ điện nước
       </a>{" "}
       » Thợ sửa điện nước tại nhà TPHCM, Bình Dương, Biên Hòa
     </nav>
 
-    <h1 style={styles.title}>Thợ sửa điện nước tại nhà TPHCM, Bình Dương, Biên Hòa</h1>
-    <hr style={styles.divider} />
-    <div style={styles.viewCount}>LƯỢT XEM: 19107 BY HƯNG THỊNH TEAM</div>
+    <h1 className="font-bold text-3xl text-gray-800 mb-2">
+      Thợ sửa điện nước tại nhà TPHCM, Bình Dương, Biên Hòa
+    </h1>
+    <hr className="mb-5 border-gray-300" />
+    <div className="text-xs text-gray-500 mb-5 tracking-wide">
+      LƯỢT XEM: 19107 BY HƯNG THỊNH TEAM
+    </div>
 
-    <p style={styles.paragraph}>
+    <p className="text-base mb-5">
       <b>Thợ sửa chữa điện nước tại nhà</b> của công ty Điện Nước Hưng Thịnh chuyên nhận
       sửa điện, <b>sửa nước tại nhà</b> bị các sự cố gặp phải trong quá trình sử dụng
       cho các hộ gia đình, văn phòng công ty, nhà hàng, khách sạn, shop cửa hàng…
     </p>
 
-    <p style={styles.paragraph}>
+    <p className="text-base mb-5">
       Chúng tôi có đội ngũ nhân lực trên 20{" "}
-      <a href="#" style={styles.inlineLink}>
+      <a href="#" className="text-blue-800 underline">
         thợ điện nước
       </a>{" "}
       lành nghề, luôn sẵn sàng phục vụ nhu cầu <b>sửa điện nước tại nhà</b> của khách
       hàng tại TPHCM, Bình Dương, Biên Hòa.
     </p>
 
-    <ul style={styles.linkBox}>
+    <ul className="bg-blue-50 rounded-md p-4 list-disc mb-5 text-blue-600 ml-4">
       {ARTICLE_LINKS.map(({ text, href }) => (
-        <li key={text}>
-          <a href={href} style={styles.boxLink}>
+        <li key={text} className="mb-2">
+          <a href={href} className="text-blue-800 no-underline hover:underline block">
             {text}
           </a>
         </li>
       ))}
     </ul>
 
-    <p style={styles.paragraph}>
+    <p className="text-base mb-5">
       Chỉ cần gọi điện đến, chúng tôi sẽ cử thợ điện nước giỏi, nhiều năm kinh nghiệm
       xuống kiểm tra, báo giá và khắc phục nhanh sự cố cho quý khách. Liên hệ{" "}
       <b>0911.048.049 – 0933.424.669.</b>
     </p>
 
-    <button style={styles.callButton}>GỌI THỢ: 0911.048.049</button>
+    <button className="bg-red-700 hover:bg-red-800 text-white border-none py-3.5 px-7 font-bold text-base rounded-md cursor-pointer transition-colors">
+      GỌI THỢ: 0911.048.049
+    </button>
 
-    <div style={{ marginTop: 40 }}>
-      {/* Placeholder for image or any additional content */}
+    <div className="mt-10">
       <img
         src="https://hungthinhwater.com/wp-content/uploads/2021/05/IMG_5020-scaled-e1621947995345.jpg"
         alt="Hung Thinh service"
-        style={{ width: "100%", borderRadius: 8 }}
+        className="w-full rounded-lg"
       />
     </div>
   </article>
@@ -190,164 +182,9 @@ const Content = () => (
 
 export default function DichVuDienNuoc() {
   return (
-    <div style={styles.container}>
+    <div className="flex max-w-6xl mx-auto my-10 gap-6 px-4 font-sans text-gray-800">
       <Content />
       <Sidebar />
     </div>
   );
 }
-
-const styles = {
-  container: {
-    display: "flex",
-    maxWidth: 1200,
-    margin: "40px auto",
-    gap: 24,
-    padding: "0 16px",
-    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-    color: "#333",
-  },
-  content: {
-    flex: 3,
-    backgroundColor: "#fff",
-    padding: 24,
-    borderRadius: 8,
-    boxShadow:
-      "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
-    lineHeight: 1.6,
-  },
-  breadcrumb: {
-    fontSize: 14,
-    marginBottom: 8,
-    color: "#666",
-  },
-  breadcrumbLink: {
-    color: "#007BFF",
-    textDecoration: "none",
-  },
-  title: {
-    fontWeight: "700",
-    fontSize: 28,
-    color: "#222",
-    marginBottom: 8,
-  },
-  divider: {
-    margin: "0 0 20px 0",
-    borderColor: "#ccc",
-  },
-  viewCount: {
-    fontSize: 12,
-    color: "#999",
-    marginBottom: 20,
-    letterSpacing: 1,
-  },
-  paragraph: {
-    fontSize: 16,
-    marginBottom: 20,
-  },
-  inlineLink: {
-    color: "#1565c0",
-    textDecoration: "underline",
-  },
-  linkBox: {
-    backgroundColor: "#E9F5F9",
-    borderRadius: 6,
-    padding: 16,
-    listStyleType: "disc",
-    marginBottom: 20,
-    color: "#3498db",
-  },
-  boxLink: {
-    textDecoration: "none",
-    color: "#1565c0",
-    display: "inline-block",
-    marginBottom: 8,
-  },
-  callButton: {
-    backgroundColor: "#B4101D",
-    color: "#fff",
-    border: "none",
-    padding: "14px 28px",
-    fontWeight: "700",
-    fontSize: 16,
-    borderRadius: 6,
-    cursor: "pointer",
-    transition: "background-color 0.3s ease",
-  },
-  sidebar: {
-    flex: 1,
-    fontSize: 15,
-    color: "#444",
-  },
-  searchBox: {
-    display: "flex",
-    marginBottom: 24,
-  },
-  searchInput: {
-    flex: 1,
-    borderRadius: "4px 0 0 4px",
-    border: "1px solid #ccc",
-    padding: "8px 12px",
-    fontSize: 14,
-    outline: "none",
-  },
-  searchBtn: {
-    backgroundColor: "#F16822",
-    border: "none",
-    padding: "0 12px",
-    borderRadius: "0 4px 4px 0",
-    cursor: "pointer",
-    display: "flex",
-    alignItems: "center",
-  },
-  sidebarHeading: {
-    textTransform: "uppercase",
-    fontWeight: "700",
-    fontSize: 14,
-    marginBottom: 12,
-    letterSpacing: 1,
-    borderBottom: "2px solid #ccc",
-    paddingBottom: 6,
-  },
-  productList: {
-    listStyle: "none",
-    paddingLeft: 0,
-    marginBottom: 32,
-  },
-  dropDownBtn: {
-    background: "none",
-    border: "none",
-    color: "#444",
-    fontSize: 15,
-    cursor: "pointer",
-    padding: 0,
-    fontWeight: 600,
-  },
-  link: {
-    color: "#1565c0",
-    textDecoration: "none",
-  },
-  callImage: {
-    width: "100%",
-    objectFit: "cover",
-    borderRadius: 8,
-    marginBottom: 32,
-  },
-  newPostsList: {
-    listStyle: "none",
-    margin: 0,
-    padding: 0,
-  },
-  newPostItem: {
-    display: "flex",
-    alignItems: "center",
-    marginBottom: 16,
-  },
-  newPostThumb: {
-    width: 56,
-    height: 56,
-    objectFit: "cover",
-    borderRadius: 6,
-    marginRight: 12,
-  },
-};
